@@ -1,0 +1,21 @@
+{
+  "name": "new-order",
+  "version": "0.1.0",
+  "description": "Help you manage an ordered list of filenames.",
+  "main": "index.js",
+  "bin": {
+    "new-order": "bin/new-order"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Delapouite",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^1.3.3"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "rimraf": "^2.2.8"
+  }
+}

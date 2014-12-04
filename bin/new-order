@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+var argv = require('yargs').argv;
+
+// check CLI arguments
+var fileToMove = argv.move;
+if (typeof fileToMove !== 'string' || !fileToMove) {
+  throw new Error('Must specify which file to move');
+}
+
+var position;
+var fileToReach;
+if (argv.after) {
+  position = 'after';
+  fileToReach = argv.after;
+} else if (argv.before) {
+  position = 'before';
+  fileToReach = argv.before;
+} else {
+  throw new Error('You must specify --after or --before');
+}
+
+if (typeof fileToReach !== 'string' || !fileToReach) {
+  throw new Error('Must specify which file to reach');
+}
+
+require('../')(fileToMove, position, fileToReach);
