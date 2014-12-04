@@ -1,6 +1,6 @@
 {
   "name": "new-order",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Help you manage an ordered list of filenames.",
   "main": "index.js",
   "bin": {

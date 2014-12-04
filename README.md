@@ -9,6 +9,8 @@ Help you manage an ordered list of filenames, by splicing it.
 In the directory where you need to work :
 
 `new-order --move fileToMove --before otherFile`
+
+
 `new-order --move fileToMove --after otherFile`
 
 fileToMove and otherFile can be directories.
@@ -44,20 +46,21 @@ So you need to reorder your chapters. Doing it by hand (with the `mv` command fo
 Now you need to write the *orange* chapter. It should fit in 2nd position, between *red* and *green*.
 But if you simply call it *2 orange.md* it won't work. You need to rename all the files coming after :
 
-``
+```
+.
 .
 ..
 1 red.md
 2 orange.md
 3 green.md
 4 blue.md
-``
+```
 
 As you've guessed, this task can be very tedious and error-prone for large amounts of files.
 
 Let's see how can `new-order` help you doing this chore. 'Time to write down *yellow.md*, your next episode following the newly created *orange*'s one.
 
-``
+```
 .
 ..
 1 red.md
@@ -65,7 +68,7 @@ Let's see how can `new-order` help you doing this chore. 'Time to write down *ye
 3 green.md
 4 blue.md
 yellow.md
-``
+```
 
 You can handle this in several ways with the same result :
 
@@ -75,7 +78,7 @@ or
 
 `new-order --move yellow.md --before 3\ green.md`
 
-``
+```
 .
 ..
 1 red.md
@@ -83,11 +86,11 @@ or
 3 yellow.md
 4 green.md
 5 blue.md
-``
+```
 
 What happens if you have more than 9 files?
 
-``
+```
 .
 ..
 1 red.md
@@ -100,11 +103,11 @@ What happens if you have more than 9 files?
 8 indigo.md
 9 violet.md
 jade.md
-``
+```
 
 `new-order --move jade.md --after 5\ green.md`
 
-``
+```
 .
 ..
 01 red.md
@@ -117,7 +120,7 @@ jade.md
 08 blue.md
 09 indigo.md
 10 violet.md
-``
+```
 
 `new-order` will automatically adjust to a 2 digits naming scheme.
 
