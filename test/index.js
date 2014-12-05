@@ -42,7 +42,7 @@ rimraf(BOOK_DIR, function() {
 
           // dir support
           setTimeout(function() {
-            newOrder('7 shades of grey', 'before', '2 yellow.md', BOOK_DIR);
+            newOrder('7 shades of grey/', 'before', '2 yellow.md', BOOK_DIR);
 
             setTimeout(function() {
               var results = fs.readdirSync(BOOK_DIR);
