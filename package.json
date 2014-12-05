@@ -7,7 +7,7 @@
     "new-order": "bin/new-order"
   },
   "scripts": {
-    "test": "npm test"
+    "test": "node test"
   },
   "author": "Delapouite",
   "license": "MIT",
