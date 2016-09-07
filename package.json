@@ -1,15 +1,26 @@
 {
   "name": "new-order",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Help you manage an ordered list of filenames.",
   "main": "index.js",
+  "keywords": [
+    "fs"
+  ],
   "bin": {
     "new-order": "bin/new-order"
   },
   "scripts": {
     "test": "node test"
   },
-  "author": "Delapouite",
+  "author": "Delapouite <delapouite@gmail.com> (http://delapouite.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delapouite/new-order.git"
+  },
+  "bugs": {
+    "url": "https://github.com/delapouite/new-order/issues"
+  },
+  "homepage": "https://github.com/delapouite/new-order",
   "license": "MIT",
   "dependencies": {
     "yargs": "^1.3.3"

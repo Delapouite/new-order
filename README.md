@@ -2,7 +2,7 @@
 
 Help you manage an ordered list of filenames, by splicing it.
 
-`npm i new-order`
+`npm i new-order -g`
 
 ## Usage
 
