@@ -27,6 +27,6 @@
   },
   "devDependencies": {
     "chai": "^1.10.0",
-    "rimraf": "^2.2.8"
+    "rimraf": "^2.6.2"
   }
 }
