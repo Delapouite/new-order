@@ -11,11 +11,6 @@ var removeOrdinal = function(str) {
   return (!m) ? str : m[1].trim();
 };
 
-var pad = function(str, nb) {
-  var padding = new Array(1 + nb).join('0');
-  return (padding + str).slice(-padding.length);
-};
-
 var stripTrailingSlash = function(str) {
   return str.replace(/\/$/, '');
 };
@@ -46,7 +41,7 @@ module.exports = function(fileToMove, position, fileToReach, dir) {
 
     var padding = String(files.length).length;
     files.forEach(function(file, i) {
-      var newIndex = pad(i + 1, padding);
+      var newIndex = `${i + 1}`.padStart(padding, '0');
       var gist = removeOrdinal(file);
       var newFile = newIndex + ' ' + gist;
       fs.rename(path.join(dir, file), path.join(dir, newFile), function(err) {
