@@ -2,7 +2,6 @@
 
 var fs = require('fs');
 var path = require('path');
-var rimraf = require('rimraf');
 var expect = require('chai').expect;
 var newOrder = require('../');
 
@@ -11,7 +10,7 @@ console.log('create initial set of files');
 var BOOK_DIR = __dirname + '/rainbow/';
 
 // clean state
-rimraf(BOOK_DIR, function() {
+fs.rmdir(BOOK_DIR, { recursive: true }, function() {
   // populate initial collection of documents
   fs.mkdir(BOOK_DIR, function(err) {
     if (err) throw err;
